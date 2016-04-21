@@ -3,11 +3,12 @@ var Details = require('../components/Details');
 
 var DetailsContainer = React.createClass({
     render() {
-        console.log(this.props.location.state.weather);
         return (
-            <Details />
+            <Details
+              weather={this.props.location.state.weather}
+              city={this.props.routeParams.city} />
         )
     }
 });
-        
+
 module.exports = DetailsContainer;

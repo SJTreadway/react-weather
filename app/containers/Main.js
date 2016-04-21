@@ -1,5 +1,7 @@
 var React = require('react');
 var GetCityContainer = require('../containers/GetCityContainer');
+var Router = require('react-router');
+var Link = Router.Link;
 
 var styles = {
   container: {
@@ -17,6 +19,10 @@ var styles = {
   image: {
     height: "4%",
     width: "4%"
+  },
+  title: {
+    color: "white",
+    textDecoration: "none"
   }
 }
 
@@ -25,7 +31,9 @@ var Main = React.createClass({
         return (
             <div style={styles.container}>
                 <div style={styles.header}>
-                  <h1>Weather App</h1>
+                  <Link to={'/'} style={styles.title}>
+                    <h1>Weather App</h1>
+                  </Link>
                   <img
                     style={styles.image}
                     src="app/images/react.svg" />

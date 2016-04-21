@@ -3,6 +3,7 @@ var Router = require('react-router');
 var Link = Router.Link;
 var PropTypes = React.PropTypes;
 var utils = require('../helpers/utils');
+var DayItem = require('./DayItem');
 var getDate = utils.getDate;
 var convertTemp = utils.convertTemp;
 
@@ -39,17 +40,6 @@ var styles = {
   }
 }
 
-function DayItem(props) {
-  var date = getDate(props.day.dt);
-  var icon = props.day.weather[0].icon;
-  return (
-    <div style={styles.dayContainer} onClick={props.handleClick}>
-      <img style={styles.weather} src={'./app/images/weather-icons/' + icon + '.svg'} alt='Weather' />
-      <h2 style={styles.subheader}>{date}</h2>
-    </div>
-  )
-}
-
 function ForecastUI(props) {
   return (
     <div style={{textAlign: 'center'}}>
@@ -70,7 +60,7 @@ function Forecast(props) {
       {
         props.isLoading === true
           ? <h1 style={styles.header}> Loading </h1>
-          : <ForecastUI 
+          : <ForecastUI
                 city={props.city}
                 forecast={props.forecastData}
                 handleClick={props.handleClick} />

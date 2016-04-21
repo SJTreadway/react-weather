@@ -20,7 +20,7 @@ function InputField(props) {
       className="form-control"
       onChange={props.onUpdateCity}
       value={props.city}
-      placeholder="Tuscaloosa, Alabama" />
+      placeholder="Tuscaloosa, AL" />
   )
 }
 
