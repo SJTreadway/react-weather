@@ -6,7 +6,7 @@ var _APIKEY = 'fea8c7fc49d592f34c72c781501bdb79';
 function prepRouteParams(queryStringData) {
   return Object.keys(queryStringData)
     .map((key) => {
-      return key + '=' + encodeURIComponent(queryStringData);
+      return key + '=' + encodeURIComponent(queryStringData[key]);
     }).join('&')
 }
 
@@ -28,7 +28,7 @@ function getCurrentWeather(city) {
 
   return axios.get(url)
     .then((currentWeatherData) => {
-      console.log(currentWeatherData.data);
+      return currentWeatherData.data;
     })
 }
 
@@ -38,7 +38,7 @@ function getForecast(city) {
 
   return axios.get(url)
     .then((forecastData) => {
-      console.log(forecastData.data);
+      return forecastData.data;
     })
 }
 
