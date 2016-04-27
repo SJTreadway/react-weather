@@ -12,7 +12,7 @@ var styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    background: 'royalblue',
+    background: 'slategray',
     color: '#fff',
     padding: 5,
   },
@@ -21,7 +21,7 @@ var styles = {
     width: "4%"
   },
   title: {
-    color: "white",
+    color: "#fff",
     textDecoration: "none"
   }
 }
@@ -36,7 +36,7 @@ var Main = React.createClass({
                   </Link>
                   <img
                     style={styles.image}
-                    src="app/images/react.svg" />
+                    src={require("../images/react.svg")} />
                   <GetCityContainer direction="row"/>
                 </div>
                 {this.props.children}

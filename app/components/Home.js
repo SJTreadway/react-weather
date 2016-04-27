@@ -4,7 +4,7 @@ var GetCityContainer = require('../containers/GetCityContainer');
 var styles = {
   container: {
     backgroundSize: 'cover',
-    backgroundImage: "url('app/images/cloudys.jpg')",
+    backgroundColor: 'skyblue',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
