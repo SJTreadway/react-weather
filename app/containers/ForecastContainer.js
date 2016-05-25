@@ -5,7 +5,7 @@ var helpers = require('../helpers/api');
 
 var ForecastContainer = React.createClass({
     contextTypes: {
-      router: React.PropTypes.object.isRequired  
+      router: React.PropTypes.object.isRequired
     },
     getInitialState() {
         return {
@@ -38,10 +38,10 @@ var ForecastContainer = React.createClass({
     },
     render() {
         return (
-            <Forecast 
+            <Forecast
                 city={this.props.routeParams.city}
                 isLoading={this.state.isLoading}
-                forecastData={this.state.forecastData} 
+                forecastData={this.state.forecastData}
                 handleClick={this.handleClick} />
         )
     }

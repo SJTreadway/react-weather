@@ -1,7 +1,7 @@
-var React = require('react');
-var Details = require('../components/Details');
+const React = require('react');
+const Details = require('../components/Details');
 
-var DetailsContainer = React.createClass({
+const DetailsContainer = React.createClass({
     render() {
         return (
             <Details
